@@ -6,7 +6,15 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
-    tools:context=".MainActivity">
+    tools:context="org.eu5.learn_pisio.diceroller.MainActivity">
+
+    <ImageView
+        android:id="@+id/dice_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/dice_1"
+        android:src="@drawable/dice_1" />
 
     <TextView
         android:id="@+id/result_text"
