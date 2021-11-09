@@ -11,6 +11,9 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 	
+	// ise lateinit to extract the ImageView variable as field
+	lateinit var diceImage: ImageView
+	
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
@@ -27,6 +30,9 @@ class MainActivity : AppCompatActivity() {
 			// method to be called when the button is clicked
 			rollDice()
 		}
+		
+		// initialize the ImageView variable | diceImage field
+		diceImage = findViewById(R.id.dice_image)
 	}
 	
 	// implement rollDice() method
@@ -39,8 +45,10 @@ class MainActivity : AppCompatActivity() {
 		// get a reference to the TextView result_text
 		val resultText: TextView = findViewById(R.id.result_text)
 		
+		// Now we're using diceImage field instead of a local variable, so
+		// YOU DON'T NEED THIS ANYMORE!!!
 		// get a reference to the ImageView dice_image
-		val diceImage: ImageView = findViewById(R.id.dice_image)
+		//val diceImage: ImageView = findViewById(R.id.dice_image)
 		
 		// choose the right drawable resource based on the value of randomInt
 		val drawableResource = when (randomInt) {
